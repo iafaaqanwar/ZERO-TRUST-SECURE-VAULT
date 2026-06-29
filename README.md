@@ -441,13 +441,47 @@ The Super Admin console provides system-wide oversight without compromising user
 
 ## 📸 Screenshots
 
-> Screenshots of the application can be added here after running the app locally.
+### 🔑 Sign In
 
-<!-- Uncomment and replace with actual screenshot paths:
-![Login Page](screenshots/login.png)
-![User Dashboard](screenshots/dashboard.png)
-![Super Admin Console](screenshots/superadmin.png)
--->
+<p align="center">
+  <img src="screenshots/Sign In.png" alt="Sign In Page" width="100%"/>
+</p>
+
+### 📝 Create Account
+
+<p align="center">
+  <img src="screenshots/Create Account.png" alt="Create Account Page" width="100%"/>
+</p>
+
+### 📂 User Dashboard
+
+<p align="center">
+  <img src="screenshots/user dashboard.png" alt="User Dashboard" width="100%"/>
+</p>
+
+### 👨‍💼 Super Admin Console
+
+<p align="center">
+  <img src="screenshots/superadmin.png" alt="Super Admin Console" width="100%"/>
+</p>
+
+### 📊 Audit Logs
+
+<p align="center">
+  <img src="screenshots/logs.png" alt="Audit Logs" width="100%"/>
+</p>
+
+### 🔄 Data Cycle
+
+<p align="center">
+  <img src="screenshots/data cycle.png" alt="Data Cycle" width="100%"/>
+</p>
+
+### 🛠️ Tech Stack
+
+<p align="center">
+  <img src="screenshots/tech stack.png" alt="Tech Stack" width="100%"/>
+</p>
 
 ---
 
