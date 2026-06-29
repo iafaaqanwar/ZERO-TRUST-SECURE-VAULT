@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zero Trust Secure Vault — Super Admin Console for system-wide monitoring and user management.">
+    <title>Zero Trust Secure Vault — Super Admin Console</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/superadmin.css">
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         ANIMATED BACKGROUND — Identical to dashboard (3 orbs + grid + grain)
+         ═══════════════════════════════════════════════════════════════════ -->
+    <div class="scene">
+        <div class="grid-bg"></div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         MAIN APPLICATION SHELL
+         ═══════════════════════════════════════════════════════════════════ -->
+    <div class="sa-app">
+
+        <!-- ═══════════ TOP HEADER BAR — Same glass style as dashboard ═══════════ -->
+        <header class="sa-header">
+            <div class="sa-header-left">
+                <div class="sa-logo">🛡️</div>
+                <div class="sa-header-brand">
+                    <h1>Super Admin Console</h1>
+                    <span>Zero Trust Secure Vault</span>
+                </div>
+            </div>
+            <div class="sa-header-right">
+                <!-- Admin badge — same pill style as dashboard user-info with Gemini glow -->
+                <div class="sa-user-info gemini-btn">
+                    <div class="sa-admin-avatar">A</div>
+                    <span class="sa-admin-email">admin@zerotrustvault.com</span>
+                    <span class="sa-admin-role">Super Admin</span>
+                </div>
+                <a href="/logout" class="sa-logout-btn" id="sa-logout-btn" title="Sign Out">⏻</a>
+            </div>
+        </header>
+
+        <!-- ═══════════ CONTENT AREA ═══════════ -->
+        <div class="sa-content">
+
+            <!-- ─────────── METRIC CARDS ROW — Gemini edge glow on hover ─────────── -->
+            <div class="sa-metrics-row">
+                <!-- Card 1: Total Active Users -->
+                <div class="sa-metric-card gemini-btn">
+                    <div class="sa-metric-header">
+                        <span class="sa-metric-label">Active Users</span>
+                        <div class="sa-metric-icon">👤</div>
+                    </div>
+                    <div class="sa-metric-value" id="metric-total-users">—</div>
+                    <div class="sa-metric-sub">Registered user vaults</div>
+                </div>
+
+                <!-- Card 2: Total Files Secured -->
+                <div class="sa-metric-card gemini-btn">
+                    <div class="sa-metric-header">
+                        <span class="sa-metric-label">Files Secured</span>
+                        <div class="sa-metric-icon">🔒</div>
+                    </div>
+                    <div class="sa-metric-value" id="metric-total-files">—</div>
+                    <div class="sa-metric-sub">Encrypted files in vault</div>
+                </div>
+
+                <!-- Card 3: Total System Storage -->
+                <div class="sa-metric-card gemini-btn">
+                    <div class="sa-metric-header">
+                        <span class="sa-metric-label">System Storage</span>
+                        <div class="sa-metric-icon">💾</div>
+                    </div>
+                    <div class="sa-metric-value" id="metric-total-storage">—</div>
+                    <div class="sa-metric-sub" id="metric-storage-sub">Total encrypted data on disk</div>
+                </div>
+            </div>
+
+            <!-- ─────────── SECTION 1: USER MANAGEMENT TABLE ─────────── -->
+            <div class="sa-section">
+                <div class="sa-section-header">
+                    <div class="sa-section-title">
+                        <span class="icon">👥</span>
+                        User Management
+                    </div>
+                    <span class="sa-section-badge" id="user-count-badge">0 users</span>
+                </div>
+                <div class="sa-table-container">
+                    <table class="sa-table" id="users-table">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Total Files</th>
+                                <th>Shared Relations</th>
+                                <th>Storage Used</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="users-table-body">
+                            <tr>
+                                <td colspan="5">
+                                    <div class="sa-loading">
+                                        <div class="sa-spinner"></div>
+                                        <p>Loading user metrics...</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ─────────── SECTION 2: LIVE AUDIT LOG FEED ─────────── -->
+            <div class="sa-section">
+                <div class="sa-section-header">
+                    <div class="sa-section-title">
+                        <span class="icon">📋</span>
+                        Live Audit Log Feed
+                    </div>
+                    <div class="sa-refresh-indicator">
+                        <span class="sa-refresh-dot"></span>
+                        <span id="audit-refresh-label">Auto-refresh every 10s</span>
+                    </div>
+                </div>
+                <div class="sa-audit-feed" id="audit-feed">
+                    <div class="sa-loading">
+                        <div class="sa-spinner"></div>
+                        <p>Loading audit logs...</p>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /.sa-content -->
+    </div><!-- /.sa-app -->
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         DELETE CONFIRMATION MODAL — Same glass modal as dashboard
+         Zero-Knowledge: triggers metadata deletion + raw .enc removal only
+         ═══════════════════════════════════════════════════════════════════ -->
+    <div class="sa-modal-overlay" id="delete-modal">
+        <div class="sa-modal">
+            <div class="sa-modal-icon">⚠️</div>
+            <h3>Permanently Delete User?</h3>
+            <p>
+                This action is <strong>irreversible</strong>. All user data will be purged:
+                credentials, file metadata, sharing permissions, and the encrypted vault folder.
+            </p>
+            <div class="sa-modal-email" id="delete-target-email">—</div>
+            <div class="sa-modal-actions">
+                <button class="sa-btn-cancel" onclick="closeDeleteModal()">Cancel</button>
+                <button class="sa-btn-confirm-delete" id="confirm-delete-btn" onclick="executeDeleteUser()">
+                    Delete Permanently
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="sa-toast-container" id="sa-toast-container"></div>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         SUPER ADMIN JAVASCRIPT
+         =================================================================
+         Security: NEVER calls /api/download, /api/preview, or any endpoint
+         that invokes decrypt_file_bytes(). Zero-Knowledge enforced.
+         ═══════════════════════════════════════════════════════════════════ -->
+    <script>
+        // ─────────────────────────────────────────────────────────────────
+        // Global State
+        // ─────────────────────────────────────────────────────────────────
+        let pendingDeleteEmail = null;
+        let auditRefreshTimer  = null;
+
+        // ─────────────────────────────────────────────────────────────────
+        // Initialisation
+        // ─────────────────────────────────────────────────────────────────
+        document.addEventListener('DOMContentLoaded', () => {
+            loadMetrics();
+            loadAuditLogs();
+            // Live monitoring — auto-refresh audit logs every 10 seconds
+            auditRefreshTimer = setInterval(loadAuditLogs, 10000);
+        });
+
+
+        // ═════════════════════════════════════════════════════════════════
+        // METRICS — Global User Metrics Matrix
+        // ═════════════════════════════════════════════════════════════════
+
+        // Count-up animation utility for metric values
+        function animateCountUp(el, target, suffix = '', decimals = 0) {
+            if (!el) return;
+            const duration = 800;
+            const startTime = performance.now();
+            const startVal = 0;
+            function update(now) {
+                const elapsed = now - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                // Ease-out cubic
+                const ease = 1 - Math.pow(1 - progress, 3);
+                const current = startVal + (target - startVal) * ease;
+                el.textContent = (decimals > 0 ? current.toFixed(decimals) : Math.round(current)) + suffix;
+                if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+        }
+
+        async function loadMetrics() {
+            try {
+                const resp = await fetch('/api/admin/metrics');
+                if (resp.status === 401 || resp.status === 403) {
+                    window.location.href = '/login';
+                    return;
+                }
+                const data = await resp.json();
+
+                // Animate summary metric cards with count-up
+                animateCountUp(document.getElementById('metric-total-users'), data.total_users);
+                animateCountUp(document.getElementById('metric-total-files'), data.total_files);
+
+                const storageMB = data.total_storage_mb;
+                if (storageMB >= 1024) {
+                    animateCountUp(document.getElementById('metric-total-storage'), storageMB / 1024, ' GB', 2);
+                } else {
+                    animateCountUp(document.getElementById('metric-total-storage'), storageMB, ' MB', 2);
+                }
+                document.getElementById('metric-storage-sub').textContent =
+                    `${formatBytes(data.total_storage)} encrypted on disk`;
+
+                // Update section badge
+                document.getElementById('user-count-badge').textContent =
+                    `${data.total_users} user${data.total_users !== 1 ? 's' : ''}`;
+
+                // Populate user management table
+                renderUserTable(data.users);
+
+            } catch (err) {
+                console.error('Failed to load metrics:', err);
+                document.getElementById('users-table-body').innerHTML = `
+                    <tr><td colspan="5">
+                        <div class="sa-empty">
+                            <div class="sa-empty-icon">⚠️</div>
+                            <h4>Failed to load metrics</h4>
+                            <p>${escapeHtml(err.message)}</p>
+                        </div>
+                    </td></tr>`;
+            }
+        }
+
+
+        function renderUserTable(users) {
+            const tbody = document.getElementById('users-table-body');
+
+            if (!users || users.length === 0) {
+                tbody.innerHTML = `
+                    <tr><td colspan="5">
+                        <div class="sa-empty">
+                            <div class="sa-empty-icon">👤</div>
+                            <h4>No registered users</h4>
+                            <p>The system has no user accounts yet.</p>
+                        </div>
+                    </td></tr>`;
+                return;
+            }
+
+            tbody.innerHTML = users.map(user => `
+                <tr>
+                    <td>
+                        <div class="sa-user-cell">
+                            <div class="sa-user-avatar">${user.email[0].toUpperCase()}</div>
+                            <span class="sa-user-email">${escapeHtml(user.email)}</span>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="sa-stat-pill files">📄 ${user.total_files}</span>
+                    </td>
+                    <td>
+                        <span class="sa-stat-pill shares">🔗 ${user.shared_relations}</span>
+                    </td>
+                    <td>
+                        <span class="sa-stat-pill storage">💾 ${user.storage_mb.toFixed(3)} MB</span>
+                    </td>
+                    <td>
+                        <button class="sa-delete-btn"
+                                onclick="openDeleteModal('${escapeHtml(user.email)}')"
+                                title="Permanently delete ${escapeHtml(user.email)}">
+                            <span class="delete-icon">🗑️</span> Delete User
+                        </button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+
+        // ═════════════════════════════════════════════════════════════════
+        // AUDIT LOGS — Live Security Event Feed (card-based like dashboard)
+        // ═════════════════════════════════════════════════════════════════
+
+        async function loadAuditLogs() {
+            try {
+                const resp = await fetch('/api/admin/audit-logs');
+                if (resp.status === 401 || resp.status === 403) {
+                    window.location.href = '/login';
+                    return;
+                }
+                const data = await resp.json();
+                renderAuditFeed(data.logs);
+            } catch (err) {
+                console.error('Failed to load audit logs:', err);
+            }
+        }
+
+
+        /**
+         * Parses legacy string logs on the fly to synthesize structured metadata changes
+         * for backward compatibility with older events.
+         */
+        function parseLegacyLog(log) {
+            if (log.metadata_changes) return log.metadata_changes;
+
+            const action = log.action || '';
+            const details = log.details || '';
+            const actor = log.actor || '';
+
+            // User signup
+            if (action === 'User Signup') {
+                const match = details.match(/New account created for (.*?)\./);
+                const email = match ? match[1] : actor;
+                return {
+                    file_manipulated: 'users.json',
+                    operation: 'INSERT',
+                    affected_key: email,
+                    details: {
+                        action: 'user_registration',
+                        storage_path: `Vault_Storage/${email}`
+                    }
+                };
+            }
+
+            // User/Admin Login success
+            if (action.includes('Login') && details.includes('authenticated successfully')) {
+                return {
+                    file_manipulated: 'session',
+                    operation: 'AUTHENTICATE',
+                    affected_key: actor,
+                    details: {
+                        role: action.includes('Super Admin') ? 'superadmin' : 'user',
+                        status: 'success'
+                    }
+                };
+            }
+
+            // Login Failed (no account)
+            if (details.includes('does not exist')) {
+                return {
+                    file_manipulated: 'session',
+                    operation: 'AUTHENTICATE',
+                    affected_key: actor,
+                    details: {
+                        role: 'user',
+                        status: 'failed',
+                        reason: 'account_not_found'
+                    }
+                };
+            }
+
+            // Login Failed (incorrect password)
+            if (details.includes('incorrect password')) {
+                return {
+                    file_manipulated: 'session',
+                    operation: 'AUTHENTICATE',
+                    affected_key: actor,
+                    details: {
+                        role: action.includes('Super Admin') ? 'superadmin' : 'user',
+                        status: 'failed',
+                        reason: 'incorrect_password'
+                    }
+                };
+            }
+
+            // File Upload
+            if (action === 'File Upload' && details.includes('encrypted and stored')) {
+                const nameMatch = details.match(/File "(.*?)"/);
+                const verMatch = details.match(/\(v(\d+)\)/);
+                const hashMatch = details.match(/SHA-256:\s*([a-fA-F0-9…]+)/);
+                const sizeMatch = details.match(/Size:\s*(\d+)\s*bytes/);
+
+                return {
+                    file_manipulated: 'metadata.json',
+                    operation: 'UPDATE',
+                    affected_key: `${actor}.files['${nameMatch ? nameMatch[1] : 'Unknown'}']`,
+                    details: {
+                        action: verMatch && verMatch[1] === '1' ? 'file_created' : 'version_added',
+                        filename: nameMatch ? nameMatch[1] : 'Unknown',
+                        version: verMatch ? parseInt(verMatch[1]) : 1,
+                        size_bytes: sizeMatch ? parseInt(sizeMatch[1]) : 0,
+                        sha256: hashMatch ? hashMatch[1] : 'Unknown'
+                    }
+                };
+            }
+
+            // File Delete
+            if (action === 'File Delete' && details.includes('Deleted')) {
+                const nameMatch = details.match(/Deleted "(.*?)"/);
+                const countMatch = details.match(/all (\d+) version/);
+
+                return {
+                    file_manipulated: 'metadata.json, permissions.json',
+                    operation: 'DELETE',
+                    affected_key: `${actor}.files['${nameMatch ? nameMatch[1] : 'Unknown'}']`,
+                    details: {
+                        action: 'file_purged',
+                        filename: nameMatch ? nameMatch[1] : 'Unknown',
+                        versions_deleted: countMatch ? parseInt(countMatch[1]) : 1
+                    }
+                };
+            }
+
+            // File Share
+            if (action === 'File Share' && details.includes('Shared')) {
+                const nameMatch = details.match(/Shared "(.*?)"/);
+                const targetMatch = details.match(/with (.*?)\./);
+                const expiryMatch = details.match(/Expiry: (.*?)\./);
+
+                return {
+                    file_manipulated: 'permissions.json',
+                    operation: 'INSERT',
+                    affected_key: `permissions['${targetMatch ? targetMatch[1].trim() : 'Unknown'}']`,
+                    details: {
+                        action: 'share_permission_granted',
+                        file_owner: actor,
+                        shared_with: targetMatch ? targetMatch[1].trim() : 'Unknown',
+                        filename: nameMatch ? nameMatch[1] : 'Unknown',
+                        expires_at: expiryMatch ? expiryMatch[1].trim() : 'Never'
+                    }
+                };
+            }
+
+            // Shared File Access Revoked
+            if (action === 'Shared File Access Revoked' && details.includes('removed shared file')) {
+                const nameMatch = details.match(/removed shared file "(.*?)"/);
+                const ownerMatch = details.match(/by owner (.*?)\s/);
+
+                return {
+                    file_manipulated: 'permissions.json',
+                    operation: 'DELETE',
+                    affected_key: `permissions['${actor}']`,
+                    details: {
+                        action: 'share_permission_revoked_by_recipient',
+                        file_owner: ownerMatch ? ownerMatch[1].trim() : 'Unknown',
+                        shared_with: actor,
+                        filename: nameMatch ? nameMatch[1] : 'Unknown'
+                    }
+                };
+            }
+
+            // User Deletion
+            if (action === 'User Deletion' && details.includes('permanently deleted user')) {
+                const targetMatch = details.match(/permanently deleted user (.*?)\./);
+                const targetEmail = targetMatch ? targetMatch[1].trim() : 'Unknown';
+                return {
+                    file_manipulated: 'users.json, metadata.json, permissions.json',
+                    operation: 'DELETE',
+                    affected_key: targetEmail,
+                    details: {
+                        action: 'user_purged',
+                        user_email: targetEmail,
+                        vault_folder_deleted: true
+                    }
+                };
+            }
+
+            return null;
+        }
+
+        /**
+         * Render audit entries as card-based entries — same visual format
+         * as the dashboard audit-entry cards with left border accents,
+         * Gemini edge glow on hover, and vertical fade-in animation.
+         */
+        function renderAuditFeed(logs) {
+            const feed = document.getElementById('audit-feed');
+
+            if (!logs || logs.length === 0) {
+                feed.innerHTML = `
+                    <div class="sa-empty">
+                        <div class="sa-empty-icon">📋</div>
+                        <h4>No audit events yet</h4>
+                        <p>System activity will appear here in real-time.</p>
+                    </div>`;
+                return;
+            }
+
+            feed.innerHTML = logs.map((log, index) => {
+                const classification = (log.classification || '').toUpperCase();
+                let cssClass = 'info';
+                if (classification === 'SUCCESS')              cssClass = 'success';
+                else if (classification === 'WARNING')         cssClass = 'warning';
+                else if (classification.includes('CRITICAL'))  cssClass = 'critical';
+
+                const time = formatTimestamp(log.timestamp);
+                const actor = log.actor || 'System';
+                const action = log.action || 'Event';
+                const details = log.details || '';
+
+                // Synthesize or extract metadata changes
+                const meta = parseLegacyLog(log) || log.metadata_changes;
+
+                let metadataHtml = '';
+                if (meta) {
+                    const opClass = 'operation-' + (meta.operation || '').toLowerCase();
+                    let detailsHtml = '';
+                    if (meta.details) {
+                        detailsHtml = Object.entries(meta.details).map(([k, v]) => {
+                            let valStr = escapeHtml(String(v));
+                            if (k === 'sha256' && valStr.length > 20) {
+                                valStr = valStr.substring(0, 16) + '…';
+                            }
+                            return `
+                                <div class="sa-meta-detail-row">
+                                    <span class="sa-meta-detail-key">${escapeHtml(k)}:</span>
+                                    <span class="sa-meta-detail-val">${valStr}</span>
+                                </div>
+                            `;
+                        }).join('');
+                    }
+
+                    metadataHtml = `
+                        <div class="sa-metadata-panel">
+                            <div class="sa-metadata-panel-header">
+                                <div class="sa-metadata-file">
+                                    <span class="sa-meta-label">Storage File:</span>
+                                    <span class="sa-meta-file-tag">${escapeHtml(meta.file_manipulated)}</span>
+                                </div>
+                                <span class="sa-operation-badge ${opClass}">${escapeHtml(meta.operation)}</span>
+                            </div>
+                            <div class="sa-metadata-affected">
+                                <span class="sa-meta-label">Affected Key:</span>
+                                <span class="sa-meta-key-code">${escapeHtml(meta.affected_key)}</span>
+                            </div>
+                            ${detailsHtml ? `<div class="sa-meta-details-grid">${detailsHtml}</div>` : ''}
+                        </div>
+                    `;
+                }
+
+                // Actor Pill formatting
+                let actorClass = 'sa-actor-user';
+                let actorText = actor;
+                let actorIcon = '👤';
+                if (actor === 'admin@zerotrustvault.com') {
+                    actorClass = 'sa-actor-admin';
+                    actorText = 'Super Admin';
+                    actorIcon = '👑';
+                }
+
+                const actorHtml = `
+                    <span class="sa-audit-actor-pill ${actorClass}">
+                        <span class="sa-actor-icon">${actorIcon}</span>
+                        <span class="sa-actor-email">${escapeHtml(actorText)}</span>
+                    </span>
+                `;
+
+                return `
+                    <div class="sa-audit-entry ${cssClass}" style="animation-delay: ${Math.min(index * 0.03, 0.6)}s">
+                        <div class="sa-audit-header">
+                            <div class="sa-audit-header-left">
+                                <span class="sa-audit-badge">${escapeHtml(classification)}</span>
+                                <div class="sa-audit-action">${escapeHtml(action)}</div>
+                            </div>
+                            <span class="sa-audit-time">${time}</span>
+                        </div>
+                        <div class="sa-audit-body">
+                            <div class="sa-audit-actor-row">
+                                ${actorHtml}
+                            </div>
+                            <div class="sa-audit-details">${escapeHtml(details)}</div>
+                            ${metadataHtml}
+                        </div>
+                    </div>`;
+            }).join('');
+        }
+
+
+        // ═════════════════════════════════════════════════════════════════
+        // USER DELETION — Privilege Access Control Engine
+        // ═════════════════════════════════════════════════════════════════
+
+        function openDeleteModal(email) {
+            pendingDeleteEmail = email;
+            document.getElementById('delete-target-email').textContent = email;
+            document.getElementById('delete-modal').classList.add('active');
+            document.getElementById('confirm-delete-btn').disabled = false;
+            document.getElementById('confirm-delete-btn').textContent = 'Delete Permanently';
+        }
+
+        function closeDeleteModal() {
+            pendingDeleteEmail = null;
+            document.getElementById('delete-modal').classList.remove('active');
+        }
+
+        async function executeDeleteUser() {
+            if (!pendingDeleteEmail) return;
+
+            const email = pendingDeleteEmail;
+            const btn = document.getElementById('confirm-delete-btn');
+            btn.disabled = true;
+            btn.textContent = 'Deleting...';
+
+            try {
+                const resp = await fetch(`/api/admin/delete-user/${encodeURIComponent(email)}`, {
+                    method: 'DELETE',
+                });
+                const data = await resp.json();
+
+                if (resp.ok) {
+                    showToast('success', `✓ ${data.message}`);
+                    closeDeleteModal();
+                    loadMetrics();
+                    loadAuditLogs();
+                } else {
+                    showToast('error', `✗ ${data.error || 'Deletion failed.'}`);
+                    btn.disabled = false;
+                    btn.textContent = 'Delete Permanently';
+                }
+            } catch (err) {
+                showToast('error', `✗ Network error: ${err.message}`);
+                btn.disabled = false;
+                btn.textContent = 'Delete Permanently';
+            }
+        }
+
+
+        // ═════════════════════════════════════════════════════════════════
+        // UTILITIES
+        // ═════════════════════════════════════════════════════════════════
+
+        function formatTimestamp(isoString) {
+            try {
+                const d = new Date(isoString);
+                const year  = d.getFullYear();
+                const month = String(d.getMonth() + 1).padStart(2, '0');
+                const day   = String(d.getDate()).padStart(2, '0');
+                const hours = String(d.getHours()).padStart(2, '0');
+                const mins  = String(d.getMinutes()).padStart(2, '0');
+                const secs  = String(d.getSeconds()).padStart(2, '0');
+                return `${year}-${month}-${day} ${hours}:${mins}:${secs}`;
+            } catch {
+                return isoString || '—';
+            }
+        }
+
+        function formatBytes(bytes) {
+            if (bytes === 0) return '0 B';
+            const units = ['B', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(1024));
+            return (bytes / Math.pow(1024, i)).toFixed(2) + ' ' + units[i];
+        }
+
+        function escapeHtml(str) {
+            const div = document.createElement('div');
+            div.textContent = str;
+            return div.innerHTML;
+        }
+
+        function showToast(type, message) {
+            const container = document.getElementById('sa-toast-container');
+            const toast = document.createElement('div');
+            toast.className = `sa-toast ${type}`;
+            toast.innerHTML = `<span>${message}</span>`;
+            container.appendChild(toast);
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateY(12px)';
+                toast.style.transition = 'all 0.3s ease';
+                setTimeout(() => toast.remove(), 300);
+            }, 4000);
+        }
+    </script>
+
+</body>
+</html>

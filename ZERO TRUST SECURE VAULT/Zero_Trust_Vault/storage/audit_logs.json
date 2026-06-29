@@ -1,0 +1,1470 @@
+[
+  {
+    "timestamp": "2026-06-07T09:41:14.826776+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Signup",
+    "classification": "SUCCESS",
+    "details": "New account created for afaaq@zerotrustvault.com. Isolated vault provisioned."
+  },
+  {
+    "timestamp": "2026-06-07T09:41:26.090426+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T09:54:35.500304+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com logged out successfully."
+  },
+  {
+    "timestamp": "2026-06-07T09:54:50.563322+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T09:55:24.984946+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com logged out successfully."
+  },
+  {
+    "timestamp": "2026-06-07T09:55:46.891935+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T10:16:56.801470+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "File Upload",
+    "classification": "SUCCESS",
+    "details": "File \"AI Lab Project.docx\" (v1) encrypted and stored. SHA-256: a6477ac8010397d2…  Size: 19690 bytes."
+  },
+  {
+    "timestamp": "2026-06-07T10:17:04.455283+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "File Preview",
+    "classification": "SUCCESS",
+    "details": "File \"AI Lab Project.docx\" v1 decrypted for preview. Integrity OK."
+  },
+  {
+    "timestamp": "2026-06-07T10:17:11.988414+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "File Download",
+    "classification": "SUCCESS",
+    "details": "File \"AI Lab Project.docx\" v1 decrypted and integrity verified. SHA-256: a6477ac8010397d2…"
+  },
+  {
+    "timestamp": "2026-06-07T10:17:29.898151+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "File Preview",
+    "classification": "SUCCESS",
+    "details": "File \"AI Lab Project.docx\" v1 decrypted for preview. Integrity OK."
+  },
+  {
+    "timestamp": "2026-06-07T10:18:14.351250+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com logged out successfully."
+  },
+  {
+    "timestamp": "2026-06-07T10:18:51.848309+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "User Signup",
+    "classification": "SUCCESS",
+    "details": "New account created for arslan@zerotrustvault.com. Isolated vault provisioned."
+  },
+  {
+    "timestamp": "2026-06-07T10:19:06.579122+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "arslan@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T10:19:17.514871+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "arslan@zerotrustvault.com logged out successfully."
+  },
+  {
+    "timestamp": "2026-06-07T10:19:26.429902+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T10:19:43.336485+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "File Share",
+    "classification": "SUCCESS",
+    "details": "Shared \"AI Lab Project.docx\" with arslan@zerotrustvault.com. Expiry: 2026-06-07T11:19:43.331744+00:00. No file duplication."
+  },
+  {
+    "timestamp": "2026-06-07T10:19:52.995038+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com logged out successfully."
+  },
+  {
+    "timestamp": "2026-06-07T10:19:57.957919+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "arslan@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T10:20:10.281939+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "Shared Preview",
+    "classification": "SUCCESS",
+    "details": "Previewed shared file \"AI Lab Project.docx\" from afaaq@zerotrustvault.com."
+  },
+  {
+    "timestamp": "2026-06-07T10:20:47.392855+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "arslan@zerotrustvault.com logged out successfully."
+  },
+  {
+    "timestamp": "2026-06-07T10:20:54.884882+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T10:21:30.406461+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com logged out successfully."
+  },
+  {
+    "timestamp": "2026-06-07T10:21:34.678378+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "arslan@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T10:22:25.629834+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "arslan@zerotrustvault.com logged out successfully."
+  },
+  {
+    "timestamp": "2026-06-07T10:22:31.936217+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T10:22:56.059723+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com logged out successfully."
+  },
+  {
+    "timestamp": "2026-06-07T10:22:59.830335+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "arslan@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T10:46:37.963776+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "Shared Preview",
+    "classification": "SUCCESS",
+    "details": "Previewed shared file \"AI Lab Project.docx\" from afaaq@zerotrustvault.com."
+  },
+  {
+    "timestamp": "2026-06-07T10:46:39.140106+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "Shared Preview",
+    "classification": "SUCCESS",
+    "details": "Previewed shared file \"AI Lab Project.docx\" from afaaq@zerotrustvault.com."
+  },
+  {
+    "timestamp": "2026-06-07T10:47:18.854094+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "arslan@zerotrustvault.com logged out successfully."
+  },
+  {
+    "timestamp": "2026-06-07T10:52:03.748050+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T10:54:00.864122+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com logged out successfully."
+  },
+  {
+    "timestamp": "2026-06-07T10:54:08.442663+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "arslan@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T10:54:19.166758+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "Shared Preview",
+    "classification": "SUCCESS",
+    "details": "Previewed shared file \"AI Lab Project.docx\" from afaaq@zerotrustvault.com."
+  },
+  {
+    "timestamp": "2026-06-07T10:55:23.540063+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "File Upload",
+    "classification": "SUCCESS",
+    "details": "File \"Better Call Saul - Moviebox Official_2-00.19.23.674-00.19.42.033.mp4\" (v1) encrypted and stored. SHA-256: aed92098a69d54fe…  Size: 10603686 bytes."
+  },
+  {
+    "timestamp": "2026-06-07T10:55:54.778810+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "File Delete",
+    "classification": "SUCCESS",
+    "details": "Deleted \"Better Call Saul - Moviebox Official_2-00.19.23.674-00.19.42.033.mp4\" and all 1 version(s)."
+  },
+  {
+    "timestamp": "2026-06-07T11:06:29.315735+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "Shared Download",
+    "classification": "SUCCESS",
+    "details": "Downloaded shared file \"AI Lab Project.docx\" from afaaq@zerotrustvault.com. Integrity OK."
+  },
+  {
+    "timestamp": "2026-06-07T11:06:36.244617+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "Shared Download",
+    "classification": "SUCCESS",
+    "details": "Downloaded shared file \"AI Lab Project.docx\" from afaaq@zerotrustvault.com. Integrity OK."
+  },
+  {
+    "timestamp": "2026-06-07T11:07:16.023423+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "arslan@zerotrustvault.com logged out successfully."
+  },
+  {
+    "timestamp": "2026-06-07T11:07:23.801121+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T11:08:20.391573+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com logged out successfully."
+  },
+  {
+    "timestamp": "2026-06-07T11:08:27.331888+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "arslan@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T11:08:35.905694+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "Shared Decryption",
+    "classification": "CRITICAL ALERT",
+    "details": "Failed to decrypt shared file afaaq@zerotrustvault.com/AI Lab Project.docx: "
+  },
+  {
+    "timestamp": "2026-06-07T11:09:09.148845+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "arslan@zerotrustvault.com logged out successfully."
+  },
+  {
+    "timestamp": "2026-06-07T11:09:14.274510+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T11:09:45.653339+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "File Preview",
+    "classification": "CRITICAL ALERT",
+    "details": "Decryption failed during preview of \"AI Lab Project.docx\": "
+  },
+  {
+    "timestamp": "2026-06-07T11:19:12.869917+00:00",
+    "actor": "alice@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "WARNING",
+    "details": "Failed login attempt — account alice@zerotrustvault.com does not exist."
+  },
+  {
+    "timestamp": "2026-06-07T11:19:13.222579+00:00",
+    "actor": "alice@zerotrustvault.com",
+    "action": "User Signup",
+    "classification": "SUCCESS",
+    "details": "New account created for alice@zerotrustvault.com. Isolated vault provisioned."
+  },
+  {
+    "timestamp": "2026-06-07T11:19:13.589508+00:00",
+    "actor": "alice@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "alice@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T11:19:13.617845+00:00",
+    "actor": "bob@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "WARNING",
+    "details": "Failed login attempt — account bob@zerotrustvault.com does not exist."
+  },
+  {
+    "timestamp": "2026-06-07T11:19:13.934369+00:00",
+    "actor": "bob@zerotrustvault.com",
+    "action": "User Signup",
+    "classification": "SUCCESS",
+    "details": "New account created for bob@zerotrustvault.com. Isolated vault provisioned."
+  },
+  {
+    "timestamp": "2026-06-07T11:19:14.278202+00:00",
+    "actor": "bob@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "bob@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T11:19:14.309497+00:00",
+    "actor": "alice@zerotrustvault.com",
+    "action": "File Upload",
+    "classification": "SUCCESS",
+    "details": "File \"test_share_ver.txt\" (v1) encrypted and stored. SHA-256: 9fb05d2f7bcbfe96…  Size: 15 bytes."
+  },
+  {
+    "timestamp": "2026-06-07T11:19:14.353923+00:00",
+    "actor": "alice@zerotrustvault.com",
+    "action": "File Upload",
+    "classification": "SUCCESS",
+    "details": "File \"test_share_ver.txt\" (v2) encrypted and stored. SHA-256: f1614c4304b4edb0…  Size: 15 bytes."
+  },
+  {
+    "timestamp": "2026-06-07T11:19:14.383970+00:00",
+    "actor": "alice@zerotrustvault.com",
+    "action": "File Share",
+    "classification": "SUCCESS",
+    "details": "Shared \"test_share_ver.txt\" with bob@zerotrustvault.com. Expiry: Never. No file duplication."
+  },
+  {
+    "timestamp": "2026-06-07T11:19:22.804184+00:00",
+    "actor": "alice@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "alice@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T11:19:23.159053+00:00",
+    "actor": "bob@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "bob@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T11:19:23.185825+00:00",
+    "actor": "alice@zerotrustvault.com",
+    "action": "File Upload",
+    "classification": "SUCCESS",
+    "details": "File \"test_share_ver.txt\" (v3) encrypted and stored. SHA-256: 9fb05d2f7bcbfe96…  Size: 15 bytes."
+  },
+  {
+    "timestamp": "2026-06-07T11:19:23.231545+00:00",
+    "actor": "alice@zerotrustvault.com",
+    "action": "File Upload",
+    "classification": "SUCCESS",
+    "details": "File \"test_share_ver.txt\" (v4) encrypted and stored. SHA-256: f1614c4304b4edb0…  Size: 15 bytes."
+  },
+  {
+    "timestamp": "2026-06-07T11:19:23.276813+00:00",
+    "actor": "alice@zerotrustvault.com",
+    "action": "File Share Update",
+    "classification": "SUCCESS",
+    "details": "Updated share of \"test_share_ver.txt\" with bob@zerotrustvault.com. Expiry: Never"
+  },
+  {
+    "timestamp": "2026-06-07T11:19:46.828932+00:00",
+    "actor": "alice@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "alice@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T11:19:47.172040+00:00",
+    "actor": "bob@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "bob@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T11:19:47.201542+00:00",
+    "actor": "alice@zerotrustvault.com",
+    "action": "File Upload",
+    "classification": "SUCCESS",
+    "details": "File \"test_share_ver.txt\" (v5) encrypted and stored. SHA-256: 9fb05d2f7bcbfe96…  Size: 15 bytes."
+  },
+  {
+    "timestamp": "2026-06-07T11:19:47.242102+00:00",
+    "actor": "alice@zerotrustvault.com",
+    "action": "File Upload",
+    "classification": "SUCCESS",
+    "details": "File \"test_share_ver.txt\" (v6) encrypted and stored. SHA-256: f1614c4304b4edb0…  Size: 15 bytes."
+  },
+  {
+    "timestamp": "2026-06-07T11:19:47.290268+00:00",
+    "actor": "alice@zerotrustvault.com",
+    "action": "File Share Update",
+    "classification": "SUCCESS",
+    "details": "Updated share of \"test_share_ver.txt\" with bob@zerotrustvault.com. Expiry: Never"
+  },
+  {
+    "timestamp": "2026-06-07T11:19:56.231657+00:00",
+    "actor": "alice@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "alice@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T11:19:56.598554+00:00",
+    "actor": "bob@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "bob@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T11:19:56.610069+00:00",
+    "actor": "alice@zerotrustvault.com",
+    "action": "File Upload",
+    "classification": "SUCCESS",
+    "details": "File \"test_share_ver.txt\" (v7) encrypted and stored. SHA-256: 9fb05d2f7bcbfe96…  Size: 15 bytes."
+  },
+  {
+    "timestamp": "2026-06-07T11:19:56.658113+00:00",
+    "actor": "alice@zerotrustvault.com",
+    "action": "File Upload",
+    "classification": "SUCCESS",
+    "details": "File \"test_share_ver.txt\" (v8) encrypted and stored. SHA-256: f1614c4304b4edb0…  Size: 15 bytes."
+  },
+  {
+    "timestamp": "2026-06-07T11:19:56.689660+00:00",
+    "actor": "alice@zerotrustvault.com",
+    "action": "File Share Update",
+    "classification": "SUCCESS",
+    "details": "Updated share of \"test_share_ver.txt\" with bob@zerotrustvault.com. Expiry: Never"
+  },
+  {
+    "timestamp": "2026-06-07T11:19:56.723729+00:00",
+    "actor": "bob@zerotrustvault.com",
+    "action": "Shared Download",
+    "classification": "SUCCESS",
+    "details": "Downloaded shared file \"test_share_ver.txt\" v1 from alice@zerotrustvault.com. Integrity OK."
+  },
+  {
+    "timestamp": "2026-06-07T11:19:56.810837+00:00",
+    "actor": "bob@zerotrustvault.com",
+    "action": "Shared Download",
+    "classification": "SUCCESS",
+    "details": "Downloaded shared file \"test_share_ver.txt\" v2 from alice@zerotrustvault.com. Integrity OK."
+  },
+  {
+    "timestamp": "2026-06-07T11:19:56.835630+00:00",
+    "actor": "bob@zerotrustvault.com",
+    "action": "Shared Preview",
+    "classification": "SUCCESS",
+    "details": "Previewed shared file \"test_share_ver.txt\" v1 from alice@zerotrustvault.com."
+  },
+  {
+    "timestamp": "2026-06-07T11:19:56.862825+00:00",
+    "actor": "bob@zerotrustvault.com",
+    "action": "Shared File Access Revoked",
+    "classification": "SUCCESS",
+    "details": "bob@zerotrustvault.com removed shared file \"test_share_ver.txt\" by owner alice@zerotrustvault.com from their library."
+  },
+  {
+    "timestamp": "2026-06-07T11:19:56.913444+00:00",
+    "actor": "alice@zerotrustvault.com",
+    "action": "File Delete",
+    "classification": "SUCCESS",
+    "details": "Deleted \"test_share_ver.txt\" and all 8 version(s)."
+  },
+  {
+    "timestamp": "2026-06-07T11:20:29.803211+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "arslan@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T11:20:38.940872+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "arslan@zerotrustvault.com logged out successfully."
+  },
+  {
+    "timestamp": "2026-06-07T11:20:43.821707+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T11:20:58.362695+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "File Share Update",
+    "classification": "SUCCESS",
+    "details": "Updated share of \"AI Lab Project.docx\" with arslan@zerotrustvault.com. Expiry: Never"
+  },
+  {
+    "timestamp": "2026-06-07T11:21:01.989041+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com logged out successfully."
+  },
+  {
+    "timestamp": "2026-06-07T11:21:06.094580+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "arslan@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T11:21:39.149168+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "arslan@zerotrustvault.com logged out successfully."
+  },
+  {
+    "timestamp": "2026-06-07T12:21:33.117923+00:00",
+    "actor": "alice@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "alice@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T12:21:33.496825+00:00",
+    "actor": "bob@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "bob@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T12:21:33.549046+00:00",
+    "actor": "alice@zerotrustvault.com",
+    "action": "File Upload",
+    "classification": "SUCCESS",
+    "details": "File \"test_share_ver.txt\" (v1) encrypted and stored. SHA-256: 9fb05d2f7bcbfe96…  Size: 15 bytes."
+  },
+  {
+    "timestamp": "2026-06-07T12:21:33.611590+00:00",
+    "actor": "alice@zerotrustvault.com",
+    "action": "File Upload",
+    "classification": "SUCCESS",
+    "details": "File \"test_share_ver.txt\" (v2) encrypted and stored. SHA-256: f1614c4304b4edb0…  Size: 15 bytes."
+  },
+  {
+    "timestamp": "2026-06-07T12:21:33.655402+00:00",
+    "actor": "alice@zerotrustvault.com",
+    "action": "File Share",
+    "classification": "SUCCESS",
+    "details": "Shared \"test_share_ver.txt\" with bob@zerotrustvault.com. Expiry: Never. No file duplication."
+  },
+  {
+    "timestamp": "2026-06-07T12:21:33.711389+00:00",
+    "actor": "bob@zerotrustvault.com",
+    "action": "Shared Download",
+    "classification": "SUCCESS",
+    "details": "Downloaded shared file \"test_share_ver.txt\" v1 from alice@zerotrustvault.com. Integrity OK."
+  },
+  {
+    "timestamp": "2026-06-07T12:21:33.735687+00:00",
+    "actor": "bob@zerotrustvault.com",
+    "action": "Shared Download",
+    "classification": "SUCCESS",
+    "details": "Downloaded shared file \"test_share_ver.txt\" v2 from alice@zerotrustvault.com. Integrity OK."
+  },
+  {
+    "timestamp": "2026-06-07T12:21:33.751920+00:00",
+    "actor": "bob@zerotrustvault.com",
+    "action": "Shared Preview",
+    "classification": "SUCCESS",
+    "details": "Previewed shared file \"test_share_ver.txt\" v1 from alice@zerotrustvault.com."
+  },
+  {
+    "timestamp": "2026-06-07T12:21:33.776870+00:00",
+    "actor": "bob@zerotrustvault.com",
+    "action": "Shared File Access Revoked",
+    "classification": "SUCCESS",
+    "details": "bob@zerotrustvault.com removed shared file \"test_share_ver.txt\" by owner alice@zerotrustvault.com from their library."
+  },
+  {
+    "timestamp": "2026-06-07T12:21:33.811603+00:00",
+    "actor": "alice@zerotrustvault.com",
+    "action": "File Delete",
+    "classification": "SUCCESS",
+    "details": "Deleted \"test_share_ver.txt\" and all 2 version(s)."
+  },
+  {
+    "timestamp": "2026-06-07T12:54:19.561218+00:00",
+    "actor": "ahsan@zerotrustvault.com",
+    "action": "User Signup",
+    "classification": "SUCCESS",
+    "details": "New account created for ahsan@zerotrustvault.com. Isolated vault provisioned."
+  },
+  {
+    "timestamp": "2026-06-07T12:54:29.899413+00:00",
+    "actor": "ahsan@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "ahsan@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T12:54:53.742891+00:00",
+    "actor": "ahsan@zerotrustvault.com",
+    "action": "File Upload",
+    "classification": "SUCCESS",
+    "details": "File \"IS LAB Project.docx\" (v1) encrypted and stored. SHA-256: 4a94d516b19a0ce3…  Size: 21068 bytes."
+  },
+  {
+    "timestamp": "2026-06-07T12:55:00.005267+00:00",
+    "actor": "ahsan@zerotrustvault.com",
+    "action": "File Preview",
+    "classification": "SUCCESS",
+    "details": "File \"IS LAB Project.docx\" v1 decrypted for preview. Integrity OK."
+  },
+  {
+    "timestamp": "2026-06-07T12:55:33.239142+00:00",
+    "actor": "ahsan@zerotrustvault.com",
+    "action": "File Share",
+    "classification": "SUCCESS",
+    "details": "Shared \"IS LAB Project.docx\" with afaaq@zerotrustvault.com. Expiry: 2026-06-07T13:55:33.194508+00:00. No file duplication."
+  },
+  {
+    "timestamp": "2026-06-07T12:55:51.816803+00:00",
+    "actor": "ahsan@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "ahsan@zerotrustvault.com logged out successfully."
+  },
+  {
+    "timestamp": "2026-06-07T12:56:01.722988+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com authenticated successfully."
+  },
+  {
+    "timestamp": "2026-06-07T12:56:27.667407+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "Shared Decryption",
+    "classification": "CRITICAL ALERT",
+    "details": "Failed to decrypt shared file ahsan@zerotrustvault.com/IS LAB Project.docx v1: "
+  },
+  {
+    "timestamp": "2026-06-07T12:57:03.370279+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com logged out successfully."
+  },
+  {
+    "timestamp": "2026-06-07T13:39:25.488747+00:00",
+    "actor": "admin@zerotrustvault.com",
+    "action": "Super Admin Login",
+    "classification": "SUCCESS",
+    "details": "Super Admin authenticated successfully. Admin control plane session established."
+  },
+  {
+    "timestamp": "2026-06-07T13:39:56.049506+00:00",
+    "actor": "admin@zerotrustvault.com",
+    "action": "User Deletion",
+    "classification": "SUCCESS",
+    "details": "Super Admin permanently deleted user bob@zerotrustvault.com. Removed from users.json, metadata.json, permissions.json. Vault folder recursively deleted."
+  },
+  {
+    "timestamp": "2026-06-07T13:40:02.982216+00:00",
+    "actor": "admin@zerotrustvault.com",
+    "action": "User Deletion",
+    "classification": "SUCCESS",
+    "details": "Super Admin permanently deleted user alice@zerotrustvault.com. Removed from users.json, metadata.json, permissions.json. Vault folder recursively deleted."
+  },
+  {
+    "timestamp": "2026-06-07T14:01:50.680983+00:00",
+    "actor": "admin@zerotrustvault.com",
+    "action": "Super Admin Login",
+    "classification": "SUCCESS",
+    "details": "Super Admin authenticated successfully. Admin control plane session established.",
+    "metadata_changes": {
+      "file_manipulated": "session",
+      "operation": "AUTHENTICATE",
+      "affected_key": "admin@zerotrustvault.com",
+      "details": {
+        "role": "superadmin",
+        "status": "success"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-07T14:02:04.239831+00:00",
+    "actor": "admin@zerotrustvault.com",
+    "action": "User Deletion",
+    "classification": "SUCCESS",
+    "details": "Super Admin permanently deleted user ahsan@zerotrustvault.com. Removed from users.json, metadata.json, permissions.json. Vault folder recursively deleted.",
+    "metadata_changes": {
+      "file_manipulated": "users.json, metadata.json, permissions.json",
+      "operation": "DELETE",
+      "affected_key": "ahsan@zerotrustvault.com",
+      "details": {
+        "action": "user_purged",
+        "user_email": "ahsan@zerotrustvault.com",
+        "vault_folder_deleted": true
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-07T14:03:08.673123+00:00",
+    "actor": "admin@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "admin@zerotrustvault.com logged out successfully.",
+    "metadata_changes": null
+  },
+  {
+    "timestamp": "2026-06-07T14:03:17.493409+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com authenticated successfully.",
+    "metadata_changes": {
+      "file_manipulated": "session",
+      "operation": "AUTHENTICATE",
+      "affected_key": "afaaq@zerotrustvault.com",
+      "details": {
+        "role": "user",
+        "status": "success"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-07T14:03:43.336155+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "File Preview",
+    "classification": "CRITICAL ALERT",
+    "details": "Decryption failed during preview of \"AI Lab Project.docx\": ",
+    "metadata_changes": {
+      "file_manipulated": "None",
+      "operation": "DECRYPTION_ERROR",
+      "affected_key": "AI Lab Project.docx",
+      "details": {
+        "version": 1,
+        "error": ""
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-07T16:38:07.570386+00:00",
+    "actor": "ahsan@zerotrustvault.com",
+    "action": "User Signup",
+    "classification": "SUCCESS",
+    "details": "New account created for ahsan@zerotrustvault.com. Isolated vault provisioned.",
+    "metadata_changes": {
+      "file_manipulated": "users.json",
+      "operation": "INSERT",
+      "affected_key": "ahsan@zerotrustvault.com",
+      "details": {
+        "action": "user_registration",
+        "storage_path": "Vault_Storage/ahsan@zerotrustvault.com",
+        "created_at": "2026-06-07T16:38:07.532823+00:00"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-07T16:38:16.710625+00:00",
+    "actor": "ahsan@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "ahsan@zerotrustvault.com authenticated successfully.",
+    "metadata_changes": {
+      "file_manipulated": "session",
+      "operation": "AUTHENTICATE",
+      "affected_key": "ahsan@zerotrustvault.com",
+      "details": {
+        "role": "user",
+        "status": "success"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-07T16:39:55.238655+00:00",
+    "actor": "ahsan@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "ahsan@zerotrustvault.com logged out successfully.",
+    "metadata_changes": null
+  },
+  {
+    "timestamp": "2026-06-07T16:40:37.691728+00:00",
+    "actor": "admin@zerotrustvault.com",
+    "action": "Super Admin Login",
+    "classification": "SUCCESS",
+    "details": "Super Admin authenticated successfully. Admin control plane session established.",
+    "metadata_changes": {
+      "file_manipulated": "session",
+      "operation": "AUTHENTICATE",
+      "affected_key": "admin@zerotrustvault.com",
+      "details": {
+        "role": "superadmin",
+        "status": "success"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-07T16:46:32.390503+00:00",
+    "actor": "admin@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "admin@zerotrustvault.com logged out successfully.",
+    "metadata_changes": null
+  },
+  {
+    "timestamp": "2026-06-07T20:05:41.851254+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com authenticated successfully.",
+    "metadata_changes": {
+      "file_manipulated": "session",
+      "operation": "AUTHENTICATE",
+      "affected_key": "afaaq@zerotrustvault.com",
+      "details": {
+        "role": "user",
+        "status": "success"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-07T20:06:11.012804+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com logged out successfully.",
+    "metadata_changes": null
+  },
+  {
+    "timestamp": "2026-06-07T20:09:00.825585+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com authenticated successfully.",
+    "metadata_changes": {
+      "file_manipulated": "session",
+      "operation": "AUTHENTICATE",
+      "affected_key": "afaaq@zerotrustvault.com",
+      "details": {
+        "role": "user",
+        "status": "success"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-07T20:13:05.378345+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "File Upload",
+    "classification": "SUCCESS",
+    "details": "File \"AI Lab Project.docx\" (v2) encrypted and stored. SHA-256: a6477ac8010397d2…  Size: 19690 bytes.",
+    "metadata_changes": {
+      "file_manipulated": "metadata.json",
+      "operation": "UPDATE",
+      "affected_key": "afaaq@zerotrustvault.com.files['AI Lab Project.docx']",
+      "details": {
+        "action": "version_added",
+        "filename": "AI Lab Project.docx",
+        "version": 2,
+        "size_bytes": 19690,
+        "encrypted_size_bytes": 26340,
+        "sha256": "a6477ac8010397d252f64418ebd2c42a3f9203d0072b3f3239aa6407df51bc76"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-07T20:13:47.237957+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "File Share Update",
+    "classification": "SUCCESS",
+    "details": "Updated share of \"AI Lab Project.docx\" with arslan@zerotrustvault.com. Expiry: Never",
+    "metadata_changes": {
+      "file_manipulated": "permissions.json",
+      "operation": "UPDATE",
+      "affected_key": "permissions['arslan@zerotrustvault.com']",
+      "details": {
+        "action": "share_permission_updated",
+        "file_owner": "afaaq@zerotrustvault.com",
+        "shared_with": "arslan@zerotrustvault.com",
+        "filename": "AI Lab Project.docx",
+        "expires_at": "Never"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-07T20:13:55.637296+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com logged out successfully.",
+    "metadata_changes": null
+  },
+  {
+    "timestamp": "2026-06-07T20:14:07.049540+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "arslan@zerotrustvault.com authenticated successfully.",
+    "metadata_changes": {
+      "file_manipulated": "session",
+      "operation": "AUTHENTICATE",
+      "affected_key": "arslan@zerotrustvault.com",
+      "details": {
+        "role": "user",
+        "status": "success"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-07T20:14:57.218471+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "Shared Download",
+    "classification": "SUCCESS",
+    "details": "Downloaded shared file \"AI Lab Project.docx\" v2 from afaaq@zerotrustvault.com. Integrity OK.",
+    "metadata_changes": {
+      "file_manipulated": "None",
+      "operation": "READ",
+      "affected_key": "AI Lab Project.docx",
+      "details": {
+        "owner": "afaaq@zerotrustvault.com",
+        "version": 2
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-07T20:18:01.700480+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "arslan@zerotrustvault.com logged out successfully.",
+    "metadata_changes": null
+  },
+  {
+    "timestamp": "2026-06-07T20:18:25.759572+00:00",
+    "actor": "admin@zerotrustvault.com",
+    "action": "Super Admin Login",
+    "classification": "SUCCESS",
+    "details": "Super Admin authenticated successfully. Admin control plane session established.",
+    "metadata_changes": {
+      "file_manipulated": "session",
+      "operation": "AUTHENTICATE",
+      "affected_key": "admin@zerotrustvault.com",
+      "details": {
+        "role": "superadmin",
+        "status": "success"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-07T20:21:12.669630+00:00",
+    "actor": "admin@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "admin@zerotrustvault.com logged out successfully.",
+    "metadata_changes": null
+  },
+  {
+    "timestamp": "2026-06-07T20:21:21.207890+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com authenticated successfully.",
+    "metadata_changes": {
+      "file_manipulated": "session",
+      "operation": "AUTHENTICATE",
+      "affected_key": "afaaq@zerotrustvault.com",
+      "details": {
+        "role": "user",
+        "status": "success"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-07T20:22:14.772809+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com logged out successfully.",
+    "metadata_changes": null
+  },
+  {
+    "timestamp": "2026-06-08T03:38:40.730617+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com authenticated successfully.",
+    "metadata_changes": {
+      "file_manipulated": "session",
+      "operation": "AUTHENTICATE",
+      "affected_key": "afaaq@zerotrustvault.com",
+      "details": {
+        "role": "user",
+        "status": "success"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-08T03:39:26.233356+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com logged out successfully.",
+    "metadata_changes": null
+  },
+  {
+    "timestamp": "2026-06-08T03:39:30.435063+00:00",
+    "actor": "admin@zerotrustvault.com",
+    "action": "Super Admin Login",
+    "classification": "SUCCESS",
+    "details": "Super Admin authenticated successfully. Admin control plane session established.",
+    "metadata_changes": {
+      "file_manipulated": "session",
+      "operation": "AUTHENTICATE",
+      "affected_key": "admin@zerotrustvault.com",
+      "details": {
+        "role": "superadmin",
+        "status": "success"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-08T03:40:28.521080+00:00",
+    "actor": "admin@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "admin@zerotrustvault.com logged out successfully.",
+    "metadata_changes": null
+  },
+  {
+    "timestamp": "2026-06-08T03:40:42.652332+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "arslan@zerotrustvault.com authenticated successfully.",
+    "metadata_changes": {
+      "file_manipulated": "session",
+      "operation": "AUTHENTICATE",
+      "affected_key": "arslan@zerotrustvault.com",
+      "details": {
+        "role": "user",
+        "status": "success"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-08T03:40:59.151469+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "File Upload",
+    "classification": "SUCCESS",
+    "details": "File \"sukuna-satoru-gojo-5120x2880-17910.jpg\" (v1) encrypted and stored. SHA-256: 85b3ca353fae1e28…  Size: 5066684 bytes.",
+    "metadata_changes": {
+      "file_manipulated": "metadata.json",
+      "operation": "UPDATE",
+      "affected_key": "arslan@zerotrustvault.com.files['sukuna-satoru-gojo-5120x2880-17910.jpg']",
+      "details": {
+        "action": "file_created",
+        "filename": "sukuna-satoru-gojo-5120x2880-17910.jpg",
+        "version": 1,
+        "size_bytes": 5066684,
+        "encrypted_size_bytes": 6755660,
+        "sha256": "85b3ca353fae1e28c1dae439699ee96c3751695e43e79fafddf03d01095a82e1"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-08T03:41:05.656370+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "File Delete",
+    "classification": "SUCCESS",
+    "details": "Deleted \"sukuna-satoru-gojo-5120x2880-17910.jpg\" and all 1 version(s).",
+    "metadata_changes": {
+      "file_manipulated": "metadata.json, permissions.json",
+      "operation": "DELETE",
+      "affected_key": "arslan@zerotrustvault.com.files['sukuna-satoru-gojo-5120x2880-17910.jpg']",
+      "details": {
+        "action": "file_purged",
+        "filename": "sukuna-satoru-gojo-5120x2880-17910.jpg",
+        "versions_deleted": 1
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-08T03:41:18.955544+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "Shared File Access Revoked",
+    "classification": "SUCCESS",
+    "details": "arslan@zerotrustvault.com removed shared file \"AI Lab Project.docx\" by owner afaaq@zerotrustvault.com from their library.",
+    "metadata_changes": {
+      "file_manipulated": "permissions.json",
+      "operation": "DELETE",
+      "affected_key": "permissions['arslan@zerotrustvault.com']",
+      "details": {
+        "action": "share_permission_revoked_by_recipient",
+        "file_owner": "afaaq@zerotrustvault.com",
+        "shared_with": "arslan@zerotrustvault.com",
+        "filename": "AI Lab Project.docx"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-08T03:41:21.719121+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "arslan@zerotrustvault.com logged out successfully.",
+    "metadata_changes": null
+  },
+  {
+    "timestamp": "2026-06-08T03:41:26.558469+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com authenticated successfully.",
+    "metadata_changes": {
+      "file_manipulated": "session",
+      "operation": "AUTHENTICATE",
+      "affected_key": "afaaq@zerotrustvault.com",
+      "details": {
+        "role": "user",
+        "status": "success"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-08T03:42:05.046922+00:00",
+    "actor": "afaaq@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "afaaq@zerotrustvault.com logged out successfully.",
+    "metadata_changes": null
+  },
+  {
+    "timestamp": "2026-06-08T04:06:12.428124+00:00",
+    "actor": "admin@zerotrustvault.com",
+    "action": "User Signup",
+    "classification": "SUCCESS",
+    "details": "New account created for admin@zerotrustvault.com. Isolated vault provisioned.",
+    "metadata_changes": {
+      "file_manipulated": "users.json",
+      "operation": "INSERT",
+      "affected_key": "admin@zerotrustvault.com",
+      "details": {
+        "action": "user_registration",
+        "storage_path": "Vault_Storage/admin@zerotrustvault.com",
+        "created_at": "2026-06-08T04:06:12.377776+00:00"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-08T04:06:27.843560+00:00",
+    "actor": "admin@zerotrustvault.com",
+    "action": "Super Admin Login",
+    "classification": "SUCCESS",
+    "details": "Super Admin authenticated successfully. Admin control plane session established.",
+    "metadata_changes": {
+      "file_manipulated": "session",
+      "operation": "AUTHENTICATE",
+      "affected_key": "admin@zerotrustvault.com",
+      "details": {
+        "role": "superadmin",
+        "status": "success"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-08T04:09:10.915925+00:00",
+    "actor": "admin@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "admin@zerotrustvault.com logged out successfully.",
+    "metadata_changes": null
+  },
+  {
+    "timestamp": "2026-06-08T04:09:45.095315+00:00",
+    "actor": "admin@zerotrustvault.com",
+    "action": "Super Admin Login",
+    "classification": "CRITICAL ALERT",
+    "details": "Failed Super Admin login attempt — incorrect password. Possible unauthorized access attempt.",
+    "metadata_changes": {
+      "file_manipulated": "session",
+      "operation": "AUTHENTICATE",
+      "affected_key": "admin@zerotrustvault.com",
+      "details": {
+        "role": "superadmin",
+        "status": "failed",
+        "reason": "incorrect_password"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-08T04:20:09.272511+00:00",
+    "actor": "admin@zerotrustvault.com",
+    "action": "Super Admin Login",
+    "classification": "SUCCESS",
+    "details": "Super Admin authenticated successfully. Admin control plane session established.",
+    "metadata_changes": {
+      "file_manipulated": "session",
+      "operation": "AUTHENTICATE",
+      "affected_key": "admin@zerotrustvault.com",
+      "details": {
+        "role": "superadmin",
+        "status": "success"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-08T04:21:56.314022+00:00",
+    "actor": "admin@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "admin@zerotrustvault.com logged out successfully.",
+    "metadata_changes": null
+  },
+  {
+    "timestamp": "2026-06-08T04:37:59.103177+00:00",
+    "actor": "sonia@zerotrustvault.com",
+    "action": "User Signup",
+    "classification": "SUCCESS",
+    "details": "New account created for sonia@zerotrustvault.com. Isolated vault provisioned.",
+    "metadata_changes": {
+      "file_manipulated": "users.json",
+      "operation": "INSERT",
+      "affected_key": "sonia@zerotrustvault.com",
+      "details": {
+        "action": "user_registration",
+        "storage_path": "Vault_Storage/sonia@zerotrustvault.com",
+        "created_at": "2026-06-08T04:37:59.065102+00:00"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-08T04:38:12.569131+00:00",
+    "actor": "sonia@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "sonia@zerotrustvault.com authenticated successfully.",
+    "metadata_changes": {
+      "file_manipulated": "session",
+      "operation": "AUTHENTICATE",
+      "affected_key": "sonia@zerotrustvault.com",
+      "details": {
+        "role": "user",
+        "status": "success"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-08T04:38:43.545859+00:00",
+    "actor": "sonia@zerotrustvault.com",
+    "action": "File Upload",
+    "classification": "SUCCESS",
+    "details": "File \"AI Lab Project.docx\" (v1) encrypted and stored. SHA-256: a6477ac8010397d2…  Size: 19690 bytes.",
+    "metadata_changes": {
+      "file_manipulated": "metadata.json",
+      "operation": "UPDATE",
+      "affected_key": "sonia@zerotrustvault.com.files['AI Lab Project.docx']",
+      "details": {
+        "action": "file_created",
+        "filename": "AI Lab Project.docx",
+        "version": 1,
+        "size_bytes": 19690,
+        "encrypted_size_bytes": 26340,
+        "sha256": "a6477ac8010397d252f64418ebd2c42a3f9203d0072b3f3239aa6407df51bc76"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-08T04:38:50.722904+00:00",
+    "actor": "sonia@zerotrustvault.com",
+    "action": "File Preview",
+    "classification": "SUCCESS",
+    "details": "File \"AI Lab Project.docx\" v1 decrypted for preview. Integrity OK.",
+    "metadata_changes": {
+      "file_manipulated": "None",
+      "operation": "READ",
+      "affected_key": "AI Lab Project.docx",
+      "details": {
+        "version": 1,
+        "sha256": "a6477ac8010397d252f64418ebd2c42a3f9203d0072b3f3239aa6407df51bc76"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-08T04:39:20.953811+00:00",
+    "actor": "sonia@zerotrustvault.com",
+    "action": "File Share",
+    "classification": "SUCCESS",
+    "details": "Shared \"AI Lab Project.docx\" with arslan@zerotrustvault.com. Expiry: Never. No file duplication.",
+    "metadata_changes": {
+      "file_manipulated": "permissions.json",
+      "operation": "INSERT",
+      "affected_key": "permissions['arslan@zerotrustvault.com']",
+      "details": {
+        "action": "share_permission_granted",
+        "file_owner": "sonia@zerotrustvault.com",
+        "shared_with": "arslan@zerotrustvault.com",
+        "filename": "AI Lab Project.docx",
+        "expires_at": "Never"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-08T04:39:26.537429+00:00",
+    "actor": "sonia@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "sonia@zerotrustvault.com logged out successfully.",
+    "metadata_changes": null
+  },
+  {
+    "timestamp": "2026-06-08T04:39:36.077358+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "User Login",
+    "classification": "SUCCESS",
+    "details": "arslan@zerotrustvault.com authenticated successfully.",
+    "metadata_changes": {
+      "file_manipulated": "session",
+      "operation": "AUTHENTICATE",
+      "affected_key": "arslan@zerotrustvault.com",
+      "details": {
+        "role": "user",
+        "status": "success"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-08T04:39:47.531605+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "Shared Preview",
+    "classification": "SUCCESS",
+    "details": "Previewed shared file \"AI Lab Project.docx\" v1 from sonia@zerotrustvault.com.",
+    "metadata_changes": {
+      "file_manipulated": "None",
+      "operation": "READ",
+      "affected_key": "AI Lab Project.docx",
+      "details": {
+        "owner": "sonia@zerotrustvault.com",
+        "version": 1
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-08T04:40:20.976157+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "Shared Decryption",
+    "classification": "CRITICAL ALERT",
+    "details": "Failed to decrypt shared file sonia@zerotrustvault.com/AI Lab Project.docx v1: ",
+    "metadata_changes": {
+      "file_manipulated": "None",
+      "operation": "DECRYPTION_ERROR",
+      "affected_key": "AI Lab Project.docx",
+      "details": {
+        "owner": "sonia@zerotrustvault.com",
+        "version": 1,
+        "error": ""
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-08T04:40:37.201759+00:00",
+    "actor": "arslan@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "arslan@zerotrustvault.com logged out successfully.",
+    "metadata_changes": null
+  },
+  {
+    "timestamp": "2026-06-08T04:40:54.501691+00:00",
+    "actor": "admin@zerotrustvault.com",
+    "action": "Super Admin Login",
+    "classification": "SUCCESS",
+    "details": "Super Admin authenticated successfully. Admin control plane session established.",
+    "metadata_changes": {
+      "file_manipulated": "session",
+      "operation": "AUTHENTICATE",
+      "affected_key": "admin@zerotrustvault.com",
+      "details": {
+        "role": "superadmin",
+        "status": "success"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-08T04:41:39.297791+00:00",
+    "actor": "admin@zerotrustvault.com",
+    "action": "User Deletion",
+    "classification": "SUCCESS",
+    "details": "Super Admin permanently deleted user afaaq@zerotrustvault.com. Removed from users.json, metadata.json, permissions.json. Vault folder recursively deleted.",
+    "metadata_changes": {
+      "file_manipulated": "users.json, metadata.json, permissions.json",
+      "operation": "DELETE",
+      "affected_key": "afaaq@zerotrustvault.com",
+      "details": {
+        "action": "user_purged",
+        "user_email": "afaaq@zerotrustvault.com",
+        "vault_folder_deleted": true
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-08T04:41:59.882258+00:00",
+    "actor": "admin@zerotrustvault.com",
+    "action": "User Logout",
+    "classification": "SUCCESS",
+    "details": "admin@zerotrustvault.com logged out successfully.",
+    "metadata_changes": null
+  }
+]

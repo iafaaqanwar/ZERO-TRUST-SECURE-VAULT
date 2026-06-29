@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zero Trust Secure Vault Dashboard — Manage encrypted files, sharing, and security audit logs.">
+    <title>Zero Trust Secure Vault — Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="scene">
+        <div class="grid-bg"></div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         SIDEBAR
+         ═══════════════════════════════════════════════════════════════ -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <div class="logo-shield">🛡️</div>
+                <div>
+                    <h1 class="app-title">Secure Vault</h1>
+                    <span class="app-subtitle">Zero Trust</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="upload-btn gemini-btn" id="btn-new-upload" onclick="openUploadModal()" title="Upload file (Ctrl+U)">
+            <span class="upload-icon">+</span>
+            <span>New Upload</span>
+        </button>
+
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active" data-section="my-drive" onclick="switchSection('my-drive', this)">
+                <span class="nav-icon">📁</span>
+                <span class="nav-label">My Drive</span>
+            </a>
+            <a href="#" class="nav-item" data-section="shared" onclick="switchSection('shared', this)">
+                <span class="nav-icon">👥</span>
+                <span class="nav-label">Shared with me</span>
+                <span class="nav-badge" id="shared-badge" style="display:none;">0</span>
+            </a>
+            <a href="#" class="nav-item" data-section="audit" onclick="switchSection('audit', this)">
+                <span class="nav-icon">📋</span>
+                <span class="nav-label">Audit Logs</span>
+            </a>
+        </nav>
+
+        <div class="storage-gauge">
+            <div class="storage-header">
+                <span class="storage-icon">💾</span>
+                <span>Storage</span>
+            </div>
+            <div class="storage-bar">
+                <div class="storage-fill" id="storage-fill" style="width:0%"></div>
+            </div>
+            <div class="storage-text" id="storage-text">0 MB of 50 MB used</div>
+            <div class="storage-details-tooltip" id="storage-details-tooltip">
+                <div class="storage-detail-row">
+                    <span>Available:</span>
+                    <strong id="storage-available">50.0 MB</strong>
+                </div>
+                <div class="storage-detail-row">
+                    <span>Usage:</span>
+                    <strong id="storage-percent-val">0%</strong>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         MAIN CONTENT
+         ═══════════════════════════════════════════════════════════════ -->
+    <main class="main-content">
+        <header class="top-header">
+            <div class="header-left">
+                <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+                <h2 class="page-title" id="page-title">My Drive</h2>
+            </div>
+            <div class="header-right">
+                <div class="user-info">
+                    <div class="user-avatar" id="user-avatar">{{ user[0]|upper }}</div>
+                    <span class="user-email">{{ user }}</span>
+                </div>
+                <a href="/logout" class="logout-btn" title="Sign Out">⏻</a>
+            </div>
+        </header>
+
+        <div class="quota-banner" id="quota-banner" style="display:none;">
+            <span class="quota-icon">⚠️</span>
+            <span class="quota-text">Storage Quota Exhausted! You have exceeded your 50 MB limit. Delete files to free up space.</span>
+            <button class="quota-close" onclick="this.parentElement.style.display='none'">✕</button>
+        </div>
+
+        <!-- Section: My Drive -->
+        <section class="content-section active" id="section-my-drive">
+            <div class="section-toolbar">
+                <div class="toolbar-info">
+                    <span class="file-count" id="file-count">0 files</span>
+                </div>
+                <div class="toolbar-actions">
+                    <button class="view-toggle" id="view-grid" onclick="setView('grid')" title="Grid view">▦</button>
+                    <button class="view-toggle active" id="view-list" onclick="setView('list')" title="List view">☰</button>
+                </div>
+            </div>
+            <div class="empty-state" id="empty-state">
+                <div class="empty-icon">📂</div>
+                <h3>Your vault is empty</h3>
+                <p>Upload files to encrypt and store them securely</p>
+                <button class="empty-upload-btn gemini-btn" onclick="openUploadModal()">Upload your first file</button>
+            </div>
+            <div class="file-grid list-view" id="file-grid"></div>
+        </section>
+
+        <!-- Section: Shared with me -->
+        <section class="content-section" id="section-shared">
+            <div class="section-toolbar">
+                <div class="toolbar-info">
+                    <span class="file-count" id="shared-count">0 shared files</span>
+                </div>
+                <div class="toolbar-actions">
+                    <button class="view-toggle" id="shared-view-grid" onclick="setView('grid')" title="Grid view">▦</button>
+                    <button class="view-toggle active" id="shared-view-list" onclick="setView('list')" title="List view">☰</button>
+                </div>
+            </div>
+            <div class="empty-state" id="shared-empty">
+                <div class="empty-icon">👥</div>
+                <h3>Nothing shared yet</h3>
+                <p>Files shared with you will appear here</p>
+            </div>
+            <div class="file-grid list-view" id="shared-grid"></div>
+        </section>
+
+        <!-- Section: Audit Logs -->
+        <section class="content-section" id="section-audit">
+            <div class="section-toolbar">
+                <div class="toolbar-info">
+                    <span class="file-count" id="audit-count">0 events</span>
+                </div>
+                <div class="toolbar-actions">
+                    <label class="filter-toggle">
+                        <input type="checkbox" id="filter-own" onchange="loadAuditLogs()">
+                        <span>My activity only</span>
+                    </label>
+                </div>
+            </div>
+            <div class="audit-feed" id="audit-feed"></div>
+        </section>
+    </main>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         MODALS
+         ═══════════════════════════════════════════════════════════════ -->
+
+    <!-- Upload Modal -->
+    <div class="modal-overlay" id="upload-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Upload to Vault</h3>
+                <button class="modal-close" onclick="closeModal('upload-modal')">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="drop-zone" id="drop-zone"
+                     ondragover="handleDragOver(event)"
+                     ondragleave="handleDragLeave(event)"
+                     ondrop="handleDrop(event)">
+                    <div class="drop-icon">☁️</div>
+                    <p class="drop-text">Drag & drop your files here</p>
+                    <p class="drop-subtext">or</p>
+                    <label class="browse-btn">
+                        Browse Files
+                        <input type="file" id="file-input" onchange="handleFileSelect(event)" hidden>
+                    </label>
+                </div>
+                <div class="selected-file" id="selected-file" style="display:none;">
+                    <div class="selected-file-info">
+                        <span class="selected-file-icon">📄</span>
+                        <div>
+                            <div class="selected-file-name" id="selected-file-name"></div>
+                            <div class="selected-file-size" id="selected-file-size"></div>
+                        </div>
+                    </div>
+                    <button class="remove-file" onclick="clearSelectedFile()">✕</button>
+                </div>
+                <div class="upload-progress" id="upload-progress" style="display:none;">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <div class="progress-text" id="progress-text">Encrypting & uploading...</div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary gemini-btn" onclick="closeModal('upload-modal')">Cancel</button>
+                <button class="btn btn-primary gemini-btn" id="upload-submit" onclick="uploadFile()" disabled>
+                    <span class="btn-text">Encrypt & Upload</span>
+                    <div class="spinner-sm"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Share Modal -->
+    <div class="modal-overlay" id="share-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Share File</h3>
+                <button class="modal-close" onclick="closeModal('share-modal')">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="share-file-name" id="share-file-name"></div>
+                <div class="form-group">
+                    <label>Share with</label>
+                    <div class="autocomplete-wrapper">
+                        <input type="text" class="form-input" id="share-email-input"
+                               placeholder="Search users by email..."
+                               oninput="handleUserSearch(this.value)" autocomplete="off">
+                        <div class="autocomplete-dropdown" id="autocomplete-dropdown"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Access Expiry</label>
+                    <select class="form-select" id="share-expiry">
+                        <option value="">No expiration (permanent)</option>
+                        <option value="1h">1 Hour</option>
+                        <option value="6h">6 Hours</option>
+                        <option value="1d">1 Day</option>
+                        <option value="7d">7 Days</option>
+                        <option value="30d">30 Days</option>
+                    </select>
+                </div>
+                <div class="share-alert" id="share-alert" style="display:none;"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary gemini-btn" onclick="closeModal('share-modal')">Cancel</button>
+                <button class="btn btn-primary gemini-btn" id="share-submit" onclick="shareFile()">
+                    <span class="btn-text">Share</span>
+                    <div class="spinner-sm"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preview Modal -->
+    <div class="modal-overlay" id="preview-modal">
+        <div class="modal modal-preview">
+            <div class="modal-header">
+                <h3 id="preview-title">File Preview</h3>
+                <button class="modal-close" onclick="closeModal('preview-modal')">✕</button>
+            </div>
+            <div class="modal-body preview-body" id="preview-body">
+                <div class="preview-loading" id="preview-loading">
+                    <div class="spinner-lg"></div>
+                    <p>Decrypting file in memory...</p>
+                </div>
+                <div class="preview-content" id="preview-content"></div>
+            </div>
+            <div class="modal-footer">
+                <div class="preview-integrity" id="preview-integrity">
+                    <span class="integrity-icon">✓</span>
+                    <span class="integrity-text">SHA-256 Integrity Verified</span>
+                </div>
+                <button class="btn btn-primary gemini-btn" id="preview-download-btn">Download</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Version History Modal -->
+    <div class="modal-overlay" id="versions-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 id="versions-title">Version History</h3>
+                <button class="modal-close" onclick="closeModal('versions-modal')">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="versions-list" id="versions-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tampering Alert Modal -->
+    <div class="modal-overlay" id="tamper-modal">
+        <div class="modal modal-tamper">
+            <div class="modal-body" style="text-align:center; padding:48px 32px;">
+                <div class="tamper-icon">🚨</div>
+                <h2 class="tamper-title">Integrity Tampering Detected</h2>
+                <p class="tamper-desc">
+                    The SHA-256 hash of the decrypted file does <strong>not match</strong> the
+                    original hash recorded during upload. This file may have been modified
+                    on disk by an unauthorized party.
+                </p>
+                <div class="tamper-details" id="tamper-details"></div>
+                <button class="btn btn-danger gemini-btn" onclick="closeModal('tamper-modal')">Acknowledge & Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="/static/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadFiles();
+            loadSharedFiles();
+            loadStorageInfo();
+        });
+    </script>
+</body>
+</html>

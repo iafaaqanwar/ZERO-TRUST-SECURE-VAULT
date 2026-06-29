@@ -1,0 +1,27 @@
+{
+  "arslan@zerotrustvault.com": {
+    "files": {}
+  },
+  "sonia@zerotrustvault.com": {
+    "files": {
+      "AI Lab Project.docx": {
+        "original_filename": "AI Lab Project.docx",
+        "current_version": 1,
+        "original_hash": "a6477ac8010397d252f64418ebd2c42a3f9203d0072b3f3239aa6407df51bc76",
+        "size": 19690,
+        "created_at": "2026-06-08T04:38:43.542643+00:00",
+        "updated_at": "2026-06-08T04:38:43.542643+00:00",
+        "versions": [
+          {
+            "version": 1,
+            "encrypted_filename": "AI Lab Project_v1.enc",
+            "original_hash": "a6477ac8010397d252f64418ebd2c42a3f9203d0072b3f3239aa6407df51bc76",
+            "size": 19690,
+            "encrypted_size": 26340,
+            "uploaded_at": "2026-06-08T04:38:43.542643+00:00"
+          }
+        ]
+      }
+    }
+  }
+}
