@@ -506,10 +506,10 @@ This project was developed as part of the **Information Security (IS)** course â
 
 | Member | Photo |
 |---|---|
-| **Afaaq** | <img src="static/afaaq.jpg" width="80" style="border-radius: 50%"/> |
-| **Ahsan** | <img src="static/ahsan.jpg" width="80" style="border-radius: 50%"/> |
-| **Arslan** | <img src="static/arslan.jpg" width="80" style="border-radius: 50%"/> |
-| **Taimoor** | <img src="static/taimoor.jpg" width="80" style="border-radius: 50%"/> |
+| **Afaaq** | <img src="ZERO%20TRUST%20SECURE%20VAULT/Zero_Trust_Vault/static/afaaq.jpg" width="80"/> |
+| **Ahsan** | <img src="ZERO%20TRUST%20SECURE%20VAULT/Zero_Trust_Vault/static/ahsan.jpg" width="80"/> |
+| **Arslan** | <img src="ZERO%20TRUST%20SECURE%20VAULT/Zero_Trust_Vault/static/arslan.jpg" width="80"/> |
+| **Taimoor** | <img src="ZERO%20TRUST%20SECURE%20VAULT/Zero_Trust_Vault/static/taimoor.jpg" width="80"/> |
 
 ---
 
