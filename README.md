@@ -443,15 +443,15 @@ The Super Admin console provides system-wide oversight without compromising user
 
 ### 🔑 Sign In
 
-![Sign In Page](screenshots/Sign%20In.png)
+![Sign In Page](screenshots/sign_in.png)
 
 ### 📝 Create Account
 
-![Create Account Page](screenshots/Create%20Account.png)
+![Create Account Page](screenshots/create_account.png)
 
 ### 📂 User Dashboard
 
-![User Dashboard](screenshots/user%20dashboard.png)
+![User Dashboard](screenshots/user_dashboard.png)
 
 ### 👨‍💼 Super Admin Console
 
@@ -463,11 +463,11 @@ The Super Admin console provides system-wide oversight without compromising user
 
 ### 🔄 Data Cycle
 
-![Data Cycle](screenshots/data%20cycle.png)
+![Data Cycle](screenshots/data_cycle.png)
 
 ### 🛠️ Tech Stack
 
-![Tech Stack](screenshots/tech%20stack.png)
+![Tech Stack](screenshots/tech_stack.png)
 
 ---
 
