@@ -443,31 +443,31 @@ The Super Admin console provides system-wide oversight without compromising user
 
 ### 🔑 Sign In
 
-![Sign In Page](screenshots/sign_in.png)
+![Sign In Page](ZERO%20TRUST%20SECURE%20VAULT/Zero_Trust_Vault/screenshots/sign_in.png)
 
 ### 📝 Create Account
 
-![Create Account Page](screenshots/create_account.png)
+![Create Account Page](ZERO%20TRUST%20SECURE%20VAULT/Zero_Trust_Vault/screenshots/create_account.png)
 
 ### 📂 User Dashboard
 
-![User Dashboard](screenshots/user_dashboard.png)
+![User Dashboard](ZERO%20TRUST%20SECURE%20VAULT/Zero_Trust_Vault/screenshots/user_dashboard.png)
 
 ### 👨‍💼 Super Admin Console
 
-![Super Admin Console](screenshots/superadmin.png)
+![Super Admin Console](ZERO%20TRUST%20SECURE%20VAULT/Zero_Trust_Vault/screenshots/superadmin.png)
 
 ### 📊 Audit Logs
 
-![Audit Logs](screenshots/logs.png)
+![Audit Logs](ZERO%20TRUST%20SECURE%20VAULT/Zero_Trust_Vault/screenshots/logs.png)
 
 ### 🔄 Data Cycle
 
-![Data Cycle](screenshots/data_cycle.png)
+![Data Cycle](ZERO%20TRUST%20SECURE%20VAULT/Zero_Trust_Vault/screenshots/data_cycle.png)
 
 ### 🛠️ Tech Stack
 
-![Tech Stack](screenshots/tech_stack.png)
+![Tech Stack](ZERO%20TRUST%20SECURE%20VAULT/Zero_Trust_Vault/screenshots/tech_stack.png)
 
 ---
 
