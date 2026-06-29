@@ -443,45 +443,31 @@ The Super Admin console provides system-wide oversight without compromising user
 
 ### 🔑 Sign In
 
-<p align="center">
-  <img src="screenshots/Sign In.png" alt="Sign In Page" width="100%"/>
-</p>
+![Sign In Page](screenshots/Sign%20In.png)
 
 ### 📝 Create Account
 
-<p align="center">
-  <img src="screenshots/Create Account.png" alt="Create Account Page" width="100%"/>
-</p>
+![Create Account Page](screenshots/Create%20Account.png)
 
 ### 📂 User Dashboard
 
-<p align="center">
-  <img src="screenshots/user dashboard.png" alt="User Dashboard" width="100%"/>
-</p>
+![User Dashboard](screenshots/user%20dashboard.png)
 
 ### 👨‍💼 Super Admin Console
 
-<p align="center">
-  <img src="screenshots/superadmin.png" alt="Super Admin Console" width="100%"/>
-</p>
+![Super Admin Console](screenshots/superadmin.png)
 
 ### 📊 Audit Logs
 
-<p align="center">
-  <img src="screenshots/logs.png" alt="Audit Logs" width="100%"/>
-</p>
+![Audit Logs](screenshots/logs.png)
 
 ### 🔄 Data Cycle
 
-<p align="center">
-  <img src="screenshots/data cycle.png" alt="Data Cycle" width="100%"/>
-</p>
+![Data Cycle](screenshots/data%20cycle.png)
 
 ### 🛠️ Tech Stack
 
-<p align="center">
-  <img src="screenshots/tech stack.png" alt="Tech Stack" width="100%"/>
-</p>
+![Tech Stack](screenshots/tech%20stack.png)
 
 ---
 
